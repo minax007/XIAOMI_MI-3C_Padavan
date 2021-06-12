@@ -112,6 +112,7 @@ env:
     CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS
     CONFIG_FIRMWARE_INCLUDE_SSSERVER
     CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
@@ -139,6 +140,7 @@ jobs:
           GIT_VERSION="$(git rev-parse --short=7 HEAD 2>/dev/null)"
           build_date="$(date +%Y%m%d)"
           echo "build_date=${build_date}" >> $GITHUB_ENV
+          echo "build_version=${GIT_VERSION}" >> $GITHUB_ENV
           echo "image_suffix=${GIT_VERSION}_${build_date}" >> $GITHUB_ENV
           echo "image_name=images_${build_variant}_${GIT_VERSION}" >> $GITHUB_ENV
       - name: Run shellcheck
@@ -174,7 +176,7 @@ jobs:
           release_name: Padavan (${{ env.image_suffix }})
           body: |
             Build Date: ${{ env.build_date }} 
-            Build Version: echo "${GIT_VERSION}"
+            Build Version: ${{ env.build_version }} 
           draft: false
           prerelease: false
 
