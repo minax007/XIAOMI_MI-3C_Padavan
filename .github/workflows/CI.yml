@@ -188,5 +188,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: /opt/images/MI-3C.trx
-          asset_name: MI-3C_${{ env.image_suffix }}.trx
+          asset_name: MI-3C_${{ env.build_date }}_${{ env.build_version }}.trx
           asset_content_type: application/bin
