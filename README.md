@@ -9,7 +9,7 @@ Daily build of the latest Padavan firmware with the minimum feature set for the 
 
 __________________________________________________________________
 
-In case you need a different feature set or for a different router feel free to fork this repsitory and to adjust the CI.yml according to your needs. 
+In case you need a different feature set or a build for a different router please feel free to fork this repository and to adjust the CI.yml according to your needs. 
 __________________________________________________________________
 
 Source code: https://github.com/hanwckf/rt-n56u
