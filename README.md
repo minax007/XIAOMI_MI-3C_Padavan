@@ -5,7 +5,8 @@
 
 Daily build of the latest Padavan firmware with the minimum feature set for the **Xiaomi Mi-3C (R3L)**
 
-![grafik](https://user-images.githubusercontent.com/67478561/167172868-d5834276-a83e-40fb-a437-daea8a5cb27d.png)
+![grafik](https://user-images.githubusercontent.com/67478561/167173198-2054455d-997d-46b3-a03b-a89f330cc014.png)
+
 __________________________________________________________________
 
 In case you need a different feature set or a build for a different router please feel free to fork this repository and to adjust the CI.yml according to your needs. 
